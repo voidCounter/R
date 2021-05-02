@@ -23,13 +23,17 @@
   .navIcon {
     display: flex;
   }
+  .main {
+    padding-left: 20px;
+    padding-right: 20px
+  }
   .menuContainer {
-    background-color: rgba(--main-marker);
+    background-color: var(--main-back-color);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
   }
   .menu {
@@ -58,13 +62,17 @@
   .navIcon {
     display: flex;
   }
+  .main {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   .menuContainer {
-    background-color: var(--main-marker);
+    background-color: rgba(255, 255, 255, 0.124);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
   }
   .menu {
@@ -92,6 +100,10 @@
 @media only screen and (min-width: 768px) {
   .navIcon {
     display: none!important;
+  }
+  .main {
+    padding-left: 140px;
+    padding-right: 140px;
   }
   .menu {
     display: flex!important;
@@ -126,6 +138,10 @@
 @media only screen and (min-width: 992px) {
   .navIcon {
     display: none!important;
+  }
+  .main {
+    padding-left: 200px;
+    padding-right: 200px;
   }
   .menuContainer {
     background-color: transparent;

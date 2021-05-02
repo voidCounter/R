@@ -9,8 +9,10 @@ const Home = () => {
     return (
         <div className={`${styles.home} home`}>
             <Navbar></Navbar>
-            <Header></Header>
-            <Social></Social>
+            <div className={`${styles.main} main`}>
+                <Header></Header>
+                <Social></Social>
+            </div>
         </div>
     );
 };
