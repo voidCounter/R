@@ -2,7 +2,12 @@
 .App {
   text-align: center;
   font-size: 19px;
+  color: var(--main-text-color);
   font-family: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box!important;
 }
 
 :root {

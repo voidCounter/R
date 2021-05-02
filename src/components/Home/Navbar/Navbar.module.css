@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     transition: all 0.3s ease-in-out;
+    transition-delay: 0.1s;
     width: 100vw;
     box-shadow: 0 7px 9px -4px rgb(18, 20, 24);
     height: 65px;
@@ -17,21 +18,21 @@
 }
 
 .navbar {
-    width: clamp(95vw, 100%, 85vw);
+    width: clamp(90vw, 90%, 85vw);
     justify-content: space-between;
 }
 
 /* logo */
 
 .logo {
-    width: 30px;
+    width: 35px;
     /* z-index: 3; */
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px solid var(--logo);
     position: relative;
-    height: 30px;
+    height: 35px;
     transform: rotateZ(45deg);
     transition: 1s all ease-in-out
 }
@@ -43,9 +44,10 @@
     height: 100%;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 21px;
     transition: all 0s;
     text-transform: uppercase;
+    padding-top: 2px;
     transform: rotateZ(-45deg);
 }
 

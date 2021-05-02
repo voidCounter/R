@@ -3,6 +3,7 @@ import { menuContext } from '../../../App';
 import Menu from './Menu/Menu';
 import menuStyles from './Menu/Menu.module.css';
 import styles from './Navbar.module.css';
+import { Slide, Fade } from 'react-reveal';
 import '../../../App.css';
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     useEffect(() => {
         window.onscroll = function () {
             let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
+            if (prevScrollpos > (currentScrollPos)) {
                 document.getElementsByClassName(styles.navbarContainer)[0].style.top = "0";
             } else {
                 document.getElementsByClassName(styles.navbarContainer)[0].style.top = "-70px";
@@ -55,27 +56,32 @@ const Navbar = () => {
         }, 230);
 
     }
+    const reloadPage = () => {
+        window.location.reload();
+    }
     return (
-        <div className={styles.navbarContainer}>
-            <div className={styles.navbar}>
-                <div className={styles.logoContainer}>
-                    <div className={styles.logo}>
-                        <div className={styles.logoText}>
-                            R
+        <Fade>
+            <div className={styles.navbarContainer}>
+                <div className={styles.navbar}>
+                    <div onClick={reloadPage} className={styles.logoContainer}>
+                        <div className={styles.logo}>
+                            <div className={styles.logoText}>
+                                R
+                        </div>
+                        </div>
+                    </div>
+                    <div className={styles.navGroup}>
+                        <div onClick={toggleNavPage} className={`${styles.navIcon} navIcon`}>
+                            <div className={styles.bar1}></div>
+                            <div className={styles.bar2}></div>
+                        </div>
+                        <div className={`${styles.menuContainer} menuContainer`} style={showMenu}>
+                            <Menu></Menu>
                         </div>
                     </div>
                 </div>
-                <div className={styles.navGroup}>
-                    <div onClick={toggleNavPage} className={`${styles.navIcon} navIcon`}>
-                        <div className={styles.bar1}></div>
-                        <div className={styles.bar2}></div>
-                    </div>
-                    <div className={`${styles.menuContainer} menuContainer`} style={showMenu}>
-                        <Menu></Menu>
-                    </div>
-                </div>
             </div>
-        </div>
+        </Fade>
     );
 };
 
