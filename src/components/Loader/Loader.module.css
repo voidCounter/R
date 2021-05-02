@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+.loaderContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loaderContainer, .loader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    /* border: 5px solid black; */
+    width: 95px;
+    position: relative;
+    height: 95px;
+    border-radius: 15px;
+    transform: rotateZ(45deg);
+    transition: 1s all ease-in-out;
+    animation-name: grow;
+    animation-delay: 2.4s;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1) rotateZ(45deg);
+    }
+    100% {
+        transform: scale(0) rotateZ(45deg);
+        display: none;
+    }
+}
+
+.top, .bottom {
+    width: 0%;
+    height: 5px;
+}
+
+.top {
+    animation-name: flowtop;
+}
+
+.bottom {
+    animation-name: flowtop;
+}
+
+.left {
+    animation-name: flowright;
+}
+
+.right {
+    animation-name: flowright;
+}
+
+@keyframes flowtop {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes flowright {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.left, .right {
+    width: 5px;
+    height: 0%;
+}
+
+.top, .bottom, .left, .right {
+    background-color: black;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.top {
+    position: absolute;
+    animation-delay: 0.1s;
+    top: 0;
+    left: 0;
+}
+
+.left {
+    animation-delay: 1s;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.right {
+    top: 0;
+    animation-delay: 0.4s;
+    right: 0;
+    position: absolute;
+}
+
+.bottom {
+    animation-delay: 0.7s;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.loaderText {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 66px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation-name: exist;
+    animation-delay: 1.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    transform: rotateZ(-45deg);
+}
+
+@keyframes exist {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
