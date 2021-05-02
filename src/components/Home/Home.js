@@ -1,12 +1,12 @@
 import React from 'react';
 import Loader from '../Loader/Loader';
+import styles from './Home.module.css';
 import Navbar from './Navbar/Navbar';
 
 const Home = () => {
     return (
-        <div>
+        <div className={`${styles.home} home`}>
             <Navbar></Navbar>
-            this is home
         </div>
     );
 };

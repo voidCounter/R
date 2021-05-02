@@ -16,7 +16,6 @@
     width: 95px;
     position: relative;
     height: 95px;
-    border-radius: 15px;
     transform: rotateZ(45deg);
     transition: 1s all ease-in-out;
     animation-name: grow;
@@ -82,7 +81,7 @@
 }
 
 .top, .bottom, .left, .right {
-    background-color: black;
+    background-color: var(--main-text-color);
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -118,11 +117,12 @@
 }
 
 .loaderText {
-    color: black;
+    color: var(--main-text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     font-size: 66px;
     text-transform: uppercase;
+    transform: rotateZ(-45deg);
     opacity: 0;
     animation-name: exist;
     animation-delay: 1.2s;
@@ -130,7 +130,6 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
-    transform: rotateZ(-45deg);
 }
 
 @keyframes exist {

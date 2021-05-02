@@ -1,75 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .App {
   text-align: center;
+  font-size: 19px;
+  font-family: 'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-text-color: rgba(255, 255, 255, 0.8);
+  --main-back-color: rgba(0, 0, 0, 0.9);
+  --logo: rgba(255, 255, 255, 0.7);
+  --main-marker: rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+  .navIcon {
+    display: flex;
+  }
+  .menuContainer {
+    background-color: rgba(--main-marker);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .menu {
+    flex-flow: column;
+    position: relative;
+    row-gap: 20px;
+  }
+  /* controlling the marker */
+  .menuItem:nth-child(1):hover~.marker {
+    transform: translateY(0px);
+  }
+  .menuItem:nth-child(2):hover~.marker {
+    transform: translateY(60px);
+  }
+  .menuItem:nth-child(3):hover~.marker {
+    transform: translateY(120px);
+  }
+  .menuItem:nth-child(4):hover~.marker {
+    transform: translateY(180px);
   }
 }
 
-.typewriter h1 {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+  .navIcon {
+    display: flex;
+  }
+  .menuContainer {
+    background-color: var(--main-marker);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .menu {
+    flex-flow: column;
+    position: relative;
+    row-gap: 20px;
+  }
+  /* controlling the marker */
+  .menuItem:nth-child(1):hover~.marker {
+    transform: translateY(0px);
+  }
+  .menuItem:nth-child(2):hover~.marker {
+    transform: translateY(60px);
+  }
+  .menuItem:nth-child(3):hover~.marker {
+    transform: translateY(120px);
+  }
+  .menuItem:nth-child(4):hover~.marker {
+    transform: translateY(180px);
+  }
 }
 
-/* The typing effect */
+/* Medium devices (landscape tablets, 768px and up) */
 
-@keyframes typing {
-  from {
-    width: 0
+@media only screen and (min-width: 768px) {
+  .navIcon {
+    display: none!important;
   }
-  to {
-    width: 100%
+  .menu {
+    display: flex!important;
+    width: 500px;
+    flex-flow: row;
+    height: 40px;
+    position: relative;
+  }
+  .menuContainer {
+    background-color: transparent;
+    display: flex!important;
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .menuItem:nth-child(1):hover~.marker {
+    transform: translateX(0px);
+  }
+  .menuItem:nth-child(2):hover~.marker {
+    transform: translateX(125px);
+  }
+  .menuItem:nth-child(3):hover~.marker {
+    transform: translateX(250px);
+  }
+  .menuItem:nth-child(4):hover~.marker {
+    transform: translateX(375px);
   }
 }
 
-/* The typewriter cursor effect */
+/* Large devices (laptops/desktops, 992px and up) */
 
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent
+@media only screen and (min-width: 992px) {
+  .navIcon {
+    display: none!important;
   }
-  50% {
-    border-color: orange;
+  .menuContainer {
+    background-color: transparent;
+    display: flex!important;
+    width: auto;
+    position: relative;
+    height: auto;
+  }
+  .menu {
+    display: flex!important;
+    width: 500px;
+    height: 40px;
+    position: relative;
+  }
+  .menuItem:nth-child(1):hover~.marker {
+    transform: translateX(0px);
+  }
+  .menuItem:nth-child(2):hover~.marker {
+    transform: translateX(125px);
+  }
+  .menuItem:nth-child(3):hover~.marker {
+    transform: translateX(250px);
+  }
+  .menuItem:nth-child(4):hover~.marker {
+    transform: translateX(375px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 1200px) {
+  .navIcon {
+    display: none!important;
   }
-  to {
-    transform: rotate(360deg);
+  .menuContainer {
+    background-color: transparent;
+    display: flex!important;
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .menu {
+    width: 500px;
+    height: 40px;
+    display: flex!important;
+    position: relative;
+  }
+  .menuItem:nth-child(1):hover~.marker {
+    transform: translateX(0px);
+  }
+  .menuItem:nth-child(2):hover~.marker {
+    transform: translateX(125px);
+  }
+  .menuItem:nth-child(3):hover~.marker {
+    transform: translateX(250px);
+  }
+  .menuItem:nth-child(4):hover~.marker {
+    transform: translateX(375px);
   }
 }

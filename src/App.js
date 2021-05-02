@@ -8,9 +8,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
+export const menuContext = createContext();
 
 function App() {
+  const [showMenu, setShowMenu] = useState({ display: "none" });
+  document.body.style.backgroundColor = "var(--main-back-color)";
   const [showLoader, setShowLoader] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -19,12 +22,14 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {
-        showLoader ?
-          <Loader></Loader>
-          :
-          <Home></Home>
-      }
+      <menuContext.Provider value={[showMenu, setShowMenu]}>
+        {
+          showLoader ?
+            <Loader></Loader>
+            :
+            <Home></Home>
+        }
+      </menuContext.Provider>
     </div>
   );
 }
