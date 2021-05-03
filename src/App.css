@@ -2,6 +2,7 @@
 .App {
   text-align: center;
   font-size: 19px;
+  width: 100vw;
   color: var(--main-text-color);
   font-family: 'Nunito', sans-serif;
 }
@@ -11,7 +12,7 @@
 }
 
 :root {
-  --main-text-color: rgba(255, 255, 255, 0.8);
+  --main-text-color: rgba(255, 255, 255, 0.7);
   --main-back-color: rgba(0, 0, 0, 0.9);
   --logo: rgba(255, 255, 255, 0.7);
   --main-marker: rgba(255, 255, 255, 0.1);
@@ -41,19 +42,6 @@
     position: relative;
     row-gap: 20px;
   }
-  /* controlling the marker */
-  .menuItem:nth-child(1):hover~.marker {
-    transform: translateY(0px);
-  }
-  .menuItem:nth-child(2):hover~.marker {
-    transform: translateY(60px);
-  }
-  .menuItem:nth-child(3):hover~.marker {
-    transform: translateY(120px);
-  }
-  .menuItem:nth-child(4):hover~.marker {
-    transform: translateY(180px);
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -67,7 +55,7 @@
     padding-right: 80px;
   }
   .menuContainer {
-    background-color: rgba(255, 255, 255, 0.124);
+    background-color: var(--main-back-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -79,19 +67,6 @@
     flex-flow: column;
     position: relative;
     row-gap: 20px;
-  }
-  /* controlling the marker */
-  .menuItem:nth-child(1):hover~.marker {
-    transform: translateY(0px);
-  }
-  .menuItem:nth-child(2):hover~.marker {
-    transform: translateY(60px);
-  }
-  .menuItem:nth-child(3):hover~.marker {
-    transform: translateY(120px);
-  }
-  .menuItem:nth-child(4):hover~.marker {
-    transform: translateY(180px);
   }
 }
 
@@ -119,18 +94,6 @@
     width: auto;
     height: auto;
   }
-  .menuItem:nth-child(1):hover~.marker {
-    transform: translateX(0px);
-  }
-  .menuItem:nth-child(2):hover~.marker {
-    transform: translateX(125px);
-  }
-  .menuItem:nth-child(3):hover~.marker {
-    transform: translateX(250px);
-  }
-  .menuItem:nth-child(4):hover~.marker {
-    transform: translateX(375px);
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -156,18 +119,6 @@
     height: 40px;
     position: relative;
   }
-  .menuItem:nth-child(1):hover~.marker {
-    transform: translateX(0px);
-  }
-  .menuItem:nth-child(2):hover~.marker {
-    transform: translateX(125px);
-  }
-  .menuItem:nth-child(3):hover~.marker {
-    transform: translateX(250px);
-  }
-  .menuItem:nth-child(4):hover~.marker {
-    transform: translateX(375px);
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -188,17 +139,5 @@
     height: 40px;
     display: flex!important;
     position: relative;
-  }
-  .menuItem:nth-child(1):hover~.marker {
-    transform: translateX(0px);
-  }
-  .menuItem:nth-child(2):hover~.marker {
-    transform: translateX(125px);
-  }
-  .menuItem:nth-child(3):hover~.marker {
-    transform: translateX(250px);
-  }
-  .menuItem:nth-child(4):hover~.marker {
-    transform: translateX(375px);
   }
 }

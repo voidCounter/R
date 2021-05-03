@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowLoader(false);
-    }, 3000);
+    }, 3300);
   }, []);
   return (
     <div className="App">

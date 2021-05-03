@@ -27,6 +27,8 @@ const Navbar = () => {
         console.log(navPage);
         const navIcon = document.getElementsByClassName(styles.navIcon)[0];
         navPage.style.opacity = "0";
+        const menuContainer = document.getElementsByClassName(styles.menuContainer)[0];
+        menuContainer.style.transform = "scale(1.3)";
         const newShow = { ...showMenu };
         if (showMenu.display === "none") {
             newShow.display = "flex";
@@ -53,14 +55,15 @@ const Navbar = () => {
         }, 220);
         setTimeout(() => {
             navPage.style.opacity = "1";
-        }, 230);
+            menuContainer.style.transform = "scale(1)";
+        }, 260);
 
     }
     const reloadPage = () => {
         window.location.reload();
     }
     return (
-        <Fade>
+        <Fade duration={600}>
             <div className={styles.navbarContainer}>
                 <div className={styles.navbar}>
                     <div onClick={reloadPage} className={styles.logoContainer}>
