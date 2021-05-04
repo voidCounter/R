@@ -8,13 +8,19 @@
   color: var(--text-white);
 }
 
+a {
+  text-decoration: none;
+  color: var(--font-normal);
+}
+
 * {
   box-sizing: border-box!important;
 }
 
 :root {
   --text-white: rgba(255, 255, 255, 0.8);
-  --text-gray: rgba(255, 255, 255, 0.3);
+  --text-gray: rgba(255, 255, 255, 0.4);
+  --text-green: #6EAD76;
   --main-back-color: rgba(0, 0, 0, 0.9);
   --logo: rgba(255, 255, 255, 0.7);
   --main-marker: rgba(255, 255, 255, 0.1);
@@ -25,7 +31,7 @@
   /* font-sizes */
   --font-n: clamp(16px, 2vw, 18px);
   --font-xxl: clamp(40px, 8vw, 75px);
-  --font-xl: clamp(25px, 6vw, 50px);
+  --font-xl: clamp(25px, 7vw, 50px);
 }
 
 /* Extra small devices (phones, 600px and down) */

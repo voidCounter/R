@@ -1,22 +1,25 @@
 .button {
-    width: min-content;
-    display: flex;
-    flex-flow: row nowrap;
+    position: relative;
+    display: block;
+    color: var(--text-green);
+    padding: 14px 40px;
+    border-radius: 40px;
     letter-spacing: 1.5px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 30px;
-    border: 1px solid var(--text-white);
-    border-radius: 100px;
-    cursor: pointer;
-    transition: 0.3s all cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.button:active {
+.linkedElement:active {
     border: 1px solid white;
-    transform: rotateZ(3deg);
+    transform: scale(1.05);
+}
+
+.linkedElement {
+    border-radius: 100px;
+    width: min-content;
+    transition: 0.3s all cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+    border: 1.5px solid var(--text-green);
+}
+
+.linkedElement:hover {
+    background-color: rgba(110, 173, 118, 0.1);
 }

@@ -5,6 +5,7 @@ import Header from './Header/Header';
 import styles from './Home.module.css';
 import Navbar from './Navbar/Navbar';
 import Rellax from "rellax";
+import About from './About/About';
 const Home = () => {
     const mainSpeed = useRef(0);
     useEffect(() => {
@@ -22,6 +23,7 @@ const Home = () => {
             <Navbar></Navbar>
             <div className={`${styles.main} main mainScroll`}>
                 <Header></Header>
+                <About></About>
             </div>
             <Social></Social>
         </div>

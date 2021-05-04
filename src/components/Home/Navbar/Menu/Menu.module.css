@@ -24,6 +24,5 @@
 }
 
 .menuItem:hover {
-    border: 2px solid var(--main-marker);
-    color: white;
+    color: var(--text-green);
 }
