@@ -81,7 +81,7 @@
 }
 
 .top, .bottom, .left, .right {
-    background-color: var(--main-text-color);
+    background-color: var(--text-white);
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -117,7 +117,7 @@
 }
 
 .loaderText {
-    color: var(--main-text-color);
+    color: var(--text-white);
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     font-size: 66px;

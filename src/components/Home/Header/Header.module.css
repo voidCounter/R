@@ -1,8 +1,25 @@
 .headerContainer {
     width: 100%;
     height: 70vh;
+    font-family: ubuntu, sans-serif;
 }
 
 .header {
-    border: 1px solid gray;
+    position: relative;
+    padding-top: 100px;
+    /* border: 1px solid gray; */
+    text-align: left;
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-size: var(--font-xxl);
+    font-weight: bolder;
+}
+
+.tagline {
+    font-size: var(--font-xl);
+    font-weight: bolder;
+    font-family: var(--font-subhead);
+    color: var(--text-gray);
 }

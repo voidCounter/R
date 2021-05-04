@@ -1,12 +1,12 @@
 import { faGithub, faGoogle, faLinkedin, faQuora, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Slide } from 'react-reveal';
+import { Fade, Slide } from 'react-reveal';
 import styles from './Social.module.css';
 
 const Social = () => {
     return (
-        <Slide bottom>
+        <Fade bottom duration={500}>
             <div className={styles.socialIcons}>
                 <a href="https://github.com/rohittz" target="_blank" rel="noopener noreferrer">
                     <div className={styles.socialIcon}>
@@ -32,7 +32,7 @@ const Social = () => {
                 </a>
 
             </div>
-        </Slide>
+        </Fade>
     )
 
 };

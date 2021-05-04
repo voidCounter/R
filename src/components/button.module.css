@@ -1,0 +1,22 @@
+.button {
+    width: min-content;
+    display: flex;
+    flex-flow: row nowrap;
+    letter-spacing: 1.5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border: 1px solid var(--text-white);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s all cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button:active {
+    border: 1px solid white;
+    transform: rotateZ(3deg);
+}

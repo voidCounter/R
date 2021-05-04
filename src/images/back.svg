@@ -1,0 +1,13 @@
+<svg id="SVGRoot" width="143.834mm" height="297mm" version="1.1" viewBox="0 0 200 50"  preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter839" x="-5.79429e-6" y="-4.09697e-6" width="1.00001" height="1.00001" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.000507"/>
+  </filter>
+ </defs>
+ <g transform="translate(-66.1663)" filter="url(#filter839)">
+  <rect width="210" height="297" ry="0" fill="#e6e6e6" stroke-width=".227792"/>
+ </g>
+ <g transform="translate(-66.1663)">
+  <path transform="scale(.264583)" d="m735.898 0c-54.631 4.65871-108.133 22.5031-153.729 52.8867-61.6425 41.0766-108.085 105.123-125.68 177.078-20.5542 84.0565-2.15768 172.049 13.3984 257.172 7.77808 42.5616 14.8545 85.4267 15.9375 128.68 1.08303 43.253-3.99706 87.1318-19.832 127.396-27.2404 69.2663-83.4217 122.161-131.559 178.93-24.0684 28.3844-46.5902 58.479-62.4727 92.1347-15.8824 33.6558-24.9008 71.2356-20.9668 108.242h542.705v-1122.52z" fill="#999" opacity=".361504"/>
+ </g>
+</svg>
