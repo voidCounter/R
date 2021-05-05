@@ -23,6 +23,32 @@
     cursor: pointer;
 }
 
+.optionText {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.optionText::after {
+    content: '';
+    transition: 0.5s width cubic-bezier(0.45, 0.80, 0, 1.30);
+    transition-delay: 200ms;
+    width: 0%;
+    border-radius: 20px;
+    height: 2px;
+    background-color: var(--text-green);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
 .menuItem:hover {
     color: var(--text-green);
+}
+
+.menuItem:hover .optionText::after {
+    width: 100%;
+}
+
+.menuItem:active .optionText::after {
+    width: 100%;
 }

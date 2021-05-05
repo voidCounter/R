@@ -15,6 +15,7 @@ a {
 
 * {
   box-sizing: border-box!important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -32,6 +33,7 @@ a {
   --font-n: clamp(16px, 2vw, 18px);
   --font-xxl: clamp(40px, 8vw, 75px);
   --font-xl: clamp(25px, 7vw, 50px);
+  --font-l: clamp(20px, 5vw, 30px);
 }
 
 /* Extra small devices (phones, 600px and down) */

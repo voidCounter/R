@@ -23,6 +23,9 @@ const Home = () => {
             <Navbar></Navbar>
             <div className={`${styles.main} main mainScroll`}>
                 <Header></Header>
+                <div className={styles.sectionTitle}>
+                    About me
+                </div>
                 <About></About>
             </div>
             <Social></Social>

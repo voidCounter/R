@@ -8,7 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import userEvent from '@testing-library/user-event';
 export const menuContext = createContext();
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       setShowLoader(false);
     }, 3300);
   }, []);
+
   return (
     <div className="App">
       <menuContext.Provider value={[showMenu, setShowMenu]}>

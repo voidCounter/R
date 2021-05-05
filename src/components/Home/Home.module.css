@@ -7,6 +7,18 @@
     position: relative;
 }
 
+.sectionTitle {
+    font-family: var(--font-heading);
+    color: var(--text-green);
+    font-weight: bold;
+    font-size: var(--font-l);
+    width: 100%;
+    text-align: left;
+    /* padding: 5px 0px; */
+    padding-left: 5px;
+    /* border-left: 5px solid var(--text-green); */
+}
+
 .main {
     height: 100vh;
     z-index: 2;
