@@ -1,0 +1,16 @@
+.tag {
+    padding: 3px 14px;
+    border-radius: 100px;
+    width: min-content;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: default;
+    border: 1px solid var(--text-green);
+    color: var(--text-green);
+    background-color: rgba(110, 173, 118, 0.08);
+}
+
+.tag:hover {
+    background-color: transparent;
+}

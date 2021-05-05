@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { menuContext } from '../../../App';
 import Menu from './Menu/Menu';
 import menuStyles from './Menu/Menu.module.css';
@@ -15,48 +15,61 @@ const Navbar = () => {
             if (prevScrollpos > (currentScrollPos)) {
                 document.getElementsByClassName(styles.navbarContainer)[0].style.top = "0";
             } else {
-                document.getElementsByClassName(styles.navbarContainer)[0].style.top = "-70px";
+                if (showMenu?.display === 'flex') {
+                    document.getElementsByClassName(styles.navbarContainer)[0].style.top = "-0px";
+                }
+                else {
+                    document.getElementsByClassName(styles.navbarContainer)[0].style.top = "-70px";
+                }
             }
             prevScrollpos = currentScrollPos;
         }
     })
     const toggleNavPage = () => {
+        // getting the current display style of the menu to make page link work perfectly
         const bar1 = document.getElementsByClassName(styles.bar1)[0];
         const bar2 = document.getElementsByClassName(styles.bar2)[0];
         const navPage = document.getElementsByClassName(styles.menuContainer)[0];
-        console.log(navPage);
         const navIcon = document.getElementsByClassName(styles.navIcon)[0];
         navPage.style.opacity = "0";
+        const navIconState = getComputedStyle(navIcon);
+        console.log(navIconState.display);
         const menuContainer = document.getElementsByClassName(styles.menuContainer)[0];
         menuContainer.style.transform = "scale(1.3)";
         const newShow = { ...showMenu };
-        if (showMenu.display === "none") {
-            newShow.display = "flex";
-            navIcon.style.rowGap = "0px";
-            bar1.style.transform = "rotateZ(45deg)";
-            bar2.style.transform = "rotateZ(-45deg)";
-            // to prevent scrolling when menu is open
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${window.scrollY}px`;
-        }
-        else {
-            newShow.display = "none";
-            navIcon.style.rowGap = "5px";
-            bar1.style.transform = "rotate(0deg)";
-            bar2.style.transform = "rotate(0deg)";
-            // When the modal is hidden...
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.top = '';
-            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        /* here we are checking if navIcon is present, if yes then ontoggling
+        , we will show the menu. Else we will not.
+        */
+        if (navIconState?.display === "flex") {
+
+            if (showMenu.display === "none") {
+                newShow.display = "flex";
+                navIcon.style.rowGap = "0px";
+                bar1.style.transform = "rotateZ(45deg)";
+                bar2.style.transform = "rotateZ(-45deg)";
+                // to prevent scrolling when menu is open
+                // document.body.style.position = 'fixed';
+                // document.body.style.top = `-${window.scrollY}px`;
+            }
+            else {
+                newShow.display = "none";
+                navIcon.style.rowGap = "5px";
+                bar1.style.transform = "rotate(0deg)";
+                bar2.style.transform = "rotate(0deg)";
+                // When the modal is hidden...
+                // const scrollY = document.body.style.top;
+                // document.body.style.position = '';
+                // document.body.style.top = '';
+                // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
         }
         setTimeout(() => {
             setShowMenu(newShow);
-        }, 220);
+        }, 240);
         setTimeout(() => {
             navPage.style.opacity = "1";
             menuContainer.style.transform = "scale(1)";
-        }, 260);
+        }, 270);
 
     }
     const reloadPage = () => {
@@ -79,7 +92,7 @@ const Navbar = () => {
                             <div className={styles.bar2}></div>
                         </div>
                         <div className={`${styles.menuContainer} menuContainer`} style={showMenu}>
-                            <Menu></Menu>
+                            <Menu toggle={toggleNavPage}></Menu>
                         </div>
                     </div>
                 </div>

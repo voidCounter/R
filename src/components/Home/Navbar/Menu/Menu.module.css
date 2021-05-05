@@ -31,7 +31,7 @@
 .optionText::after {
     content: '';
     transition: 0.5s width cubic-bezier(0.45, 0.80, 0, 1.30);
-    transition-delay: 200ms;
+    /* transition-delay: 200ms; */
     width: 0%;
     border-radius: 20px;
     height: 2px;
