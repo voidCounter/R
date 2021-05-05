@@ -1,8 +1,53 @@
 .about {
     display: grid;
-    grid-template-columns: 60% 40%;
+    align-items: flex-start;
+    column-gap: 20px;
+    padding-top: 50px;
+}
+
+.userImageContainer {
+    align-self: flex-start;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all cubic-bezier(0.45, 0.80, 0, 1.30);
+}
+
+.userImage:hover::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.userImage {
+    position: relative;
+    width: min-content;
+    border-radius: 20px;
 }
 
 .userImage img {
+    width: 250px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.userImage::after {
+    content: '';
+    position: absolute;
     width: 100%;
+    height: 99%;
+    top: 0;
+    left: 0;
+    transition: 0.5s all cubic-bezier(0.45, 0.80, 0, 1.30);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.aboutDescription {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 30px;
+    word-spacing: 1px;
+    color: var(--text-gray);
+    text-align: left;
+    font-size: var(--font-n);
 }

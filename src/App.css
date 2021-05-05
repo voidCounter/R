@@ -20,13 +20,14 @@ a {
 
 :root {
   --text-white: rgba(255, 255, 255, 0.8);
-  --text-gray: rgba(255, 255, 255, 0.4);
+  --text-gray: rgba(255, 255, 255, 0.5);
   --text-green: #6EAD76;
   --main-back-color: rgba(0, 0, 0, 0.9);
   --logo: rgba(255, 255, 255, 0.7);
   --main-marker: rgba(255, 255, 255, 0.1);
   /* fonts */
-  --font-normal: 'ubuntu', sans-serif;
+  --font-normal1: 'ubuntu', sans-serif;
+  --font-normal2: 'Lato', sans-serif;
   --font-heading: 'Manrope', sans-serif;
   --font-subhead: 'Manrope', sans-serif;
   /* font-sizes */
@@ -61,6 +62,16 @@ a {
     position: relative;
     row-gap: 20px;
   }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .userImageContainer {
+    order: 2;
+    margin-top: 60px;
+  }
+  .aboutDescription {
+    order: 1;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -70,9 +81,9 @@ a {
     display: flex;
   }
   .main {
-    padding-left: clamp(20px, 2% + 10px, 20vw);
+    padding-left: clamp(20px, 6% + 10px, 20vw);
     /* min-width: 250px; */
-    padding-right: clamp(20px, 2% + 10px, 20vw);
+    padding-right: clamp(20px, 6% + 10px, 20vw);
   }
   .menuContainer {
     background-color: var(--main-back-color);
@@ -87,6 +98,16 @@ a {
     flex-flow: column;
     position: relative;
     row-gap: 20px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .userImageContainer {
+    order: 2;
+    margin-top: 60px;
+  }
+  .aboutDescription {
+    order: 1;
   }
 }
 
@@ -115,6 +136,16 @@ a {
     width: auto;
     height: auto;
   }
+  .about {
+    grid-template-columns: 0.3fr 1fr;
+  }
+  .userImageContainer {
+    order: 1;
+    margin-top: 0px;
+  }
+  .aboutDescription {
+    order: 2;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -141,6 +172,16 @@ a {
     height: 40px;
     position: relative;
   }
+  .about {
+    grid-template-columns: 0.3fr 1fr;
+  }
+  .userImageContainer {
+    order: 1;
+    margin-top: 0px;
+  }
+  .aboutDescription {
+    order: 2;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -163,8 +204,18 @@ a {
     position: relative;
   }
   .main {
-    padding-left: clamp(150px, 15% + 50px, 50vw);
+    padding-left: clamp(150px, 20% + 50px, 50vw);
     /* min-width: 250px; */
-    padding-right: clamp(150px, 15% + 50px, 50vw);
+    padding-right: clamp(150px, 20% + 50px, 50vw);
+  }
+  .about {
+    grid-template-columns: 0.3fr 1fr;
+  }
+  .userImageContainer {
+    order: 1;
+    margin-top: 0px;
+  }
+  .aboutDescription {
+    order: 2;
   }
 }
