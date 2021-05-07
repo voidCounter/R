@@ -3,6 +3,7 @@
     align-items: flex-start;
     column-gap: 20px;
     padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 .userImageContainer {
@@ -23,7 +24,7 @@
 
 .userImage img {
     transition: 0.8s all cubic-bezier(.25, .75, .5, 1.25);
-    transition-delay: 300ms;
+    transition-delay: 100ms;
     margin-top: 2px;
     width: 100%;
     border-top-left-radius: 500px;

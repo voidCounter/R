@@ -1,0 +1,64 @@
+.projects {
+    padding-bottom: 100px;
+    height: 100vh;
+    position: relative;
+    padding-top: 100px;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 3px;
+    height: 100%;
+    background-color: rgba(110, 173, 118, 0.5);
+    border-radius: 100px;
+}
+
+.soleProject {
+    position: relative;
+    /* border: 1px solid gray; */
+    height: max-content;
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 7px;
+}
+
+.bulletMarker {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid gray; */
+    background-color: rgba(25, 25, 25, 1);
+}
+
+.projectImage {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    height: 300px;
+}
+
+.projectImage img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.bulletCircle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid rgba(110, 173, 118, 0.5);
+    top: 8px;
+    left: 8px;
+}
+
+.aboutProject {
+    /* border: 1px solid gray; */
+    padding-top: 5px;
+    padding-left: 50px;
+}
