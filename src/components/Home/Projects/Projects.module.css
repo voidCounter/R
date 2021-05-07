@@ -61,9 +61,13 @@
 .projectImage {
     width: 100%;
     background-color: gray;
+    -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-top: 300px;
     z-index: 4;
     border-radius: 10px;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
     position: -webkit-sticky;
     position: sticky;
 }

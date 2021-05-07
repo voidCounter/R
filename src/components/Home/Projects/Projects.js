@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Rellax from "rellax";
 import projectStyles from './Projects.module.css';
-import aaron from '../../../images/projects/aaron-dashboard.png';
+import aaron from '../../../images/projects/aaron-photos.png';
 import bookscaper from '../../../images/projects/bookscaper.png';
 
 const Projects = () => {
@@ -18,33 +18,36 @@ const Projects = () => {
     }, [])
     const [mouseScrollY, setMouseScroll] = useState(0);
     const [isChanged, setIsChanged] = useState(false);
-    useEffect(() => {
-        setTimeout(() => {
-            window.onscroll = () => {
-                setIsChanged(false);
-                setMouseScroll(parseInt(window.pageYOffset));
-                const projectImage = document.getElementsByClassName(projectStyles?.projectImage)[0];
-                let pITop = parseInt(projectImage.getBoundingClientRect().top - document.body.getBoundingClientRect().top);
-                console.log(`${pITop} ${mouseScrollY}`);
-                if (mouseScrollY > 2200 && isChanged == false) {
-                    const newImage = { ...currImage };
-                    newImage.background = `url(${bookscaper})`;
-                    setCurrImage(newImage);
-                    setIsChanged(true);
-                }
-            }
-        });
-    })
-    const proImg = {
-        background: `url(${aaron})`,
-        backgroundPosition: "center",
-        backgroundSize: "100%",
-        backgroundRepeat: "no-repeat",
+    function isInViewport(element) {
+        const rect = element?.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
     }
-    const [currImage, setCurrImage] = useState(proImg);
+
+    const projectOnScroll = () => {
+        const firstProject = document.getElementsByClassName(projectStyles.soleProject)[0];
+        const secondProject = document.getElementsByClassName(projectStyles.soleProject)[1];
+        if (isInViewport(firstProject) && currImage?.background !== `url(${aaron})`) {
+            const newImage = { ...currImage };
+            newImage.background = `url(${aaron})`;
+            setCurrImage(newImage);
+        }
+        else if (isInViewport(secondProject) && currImage?.background !== `url(${bookscaper})`) {
+            const newImage = { ...currImage };
+            newImage.background = `url(${bookscaper})`;
+            setCurrImage(newImage);
+        }
+    }
+    const [currImage, setCurrImage] = useState({
+        background: `url(${aaron})`,
+    });
     return (
-        <div className={projectStyles.projectContainer}>
-            <div className={projectStyles.projects}>
+        <div className={projectStyles.projectContainer} onWheel={projectOnScroll}>
+            <div className={projectStyles.projects} id="projects">
 
                 <div className={projectStyles.soleProject}>
                     <div className={projectStyles.bulletMarker}>

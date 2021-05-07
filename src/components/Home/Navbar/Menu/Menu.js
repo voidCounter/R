@@ -22,7 +22,8 @@ const Menu = (props) => {
                 <a href="#aboutSection">
                     <div className={`${styles.menuItem} menuItem`} onClick={goToAbout}><span className={styles.optionText}>About</span></div></a></Fade>
             <Fade bottom duration={500} delay={100}>
-                <div className={`${styles.menuItem} menuItem`} onClick={goToProjects}><span className={styles.optionText}>Projects</span></div></Fade>
+                <a href="#projects">
+                    <div className={`${styles.menuItem} menuItem`} onClick={goToProjects}><span className={styles.optionText}>Projects</span></div></a></Fade>
             <Fade bottom duration={500} delay={200}>
                 <div className={`${styles.menuItem} menuItem`} onClick={goToBlogs}><span className={styles.optionText}>Blogs</span></div></Fade>
             <Fade bottom duration={500} delay={300}>
