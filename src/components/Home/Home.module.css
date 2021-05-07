@@ -1,8 +1,8 @@
 .home {
     height: 657vh;
     font-family: var(--font-normal);
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
     padding-top: 70px;
     position: relative;
 }

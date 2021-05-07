@@ -14,9 +14,12 @@ a {
 }
 
 * {
-  scroll-behavior: smooth;
   box-sizing: border-box!important;
   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  /* scroll-bhavior: smooth; */
 }
 
 :root {
@@ -73,6 +76,9 @@ a {
   .aboutDescription {
     order: 1;
   }
+  .projectImage {
+    top: 65vh;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -109,6 +115,9 @@ a {
   }
   .aboutDescription {
     order: 1;
+  }
+  .projectImage {
+    top: 65vh;
   }
 }
 
@@ -147,6 +156,9 @@ a {
   .aboutDescription {
     order: 2;
   }
+  .projectImage {
+    top: 65vh;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -183,6 +195,9 @@ a {
   .aboutDescription {
     order: 2;
   }
+  .projectImage {
+    top: 65vh;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -218,5 +233,8 @@ a {
   }
   .aboutDescription {
     order: 2;
+  }
+  .projectImage {
+    top: 65vh;
   }
 }

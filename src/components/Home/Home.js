@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <div className={`${styles.home} home`}>
             <Navbar></Navbar>
-            <div className={`${styles.main} main mainScroll`}>
+            <div className={`${styles.main} main`}>
                 <Header></Header>
                 <div className={styles.sectionTitle} id="aboutSection">
                     Who am I?

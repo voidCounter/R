@@ -15,17 +15,8 @@ export const mouseScroll = createContext();
 
 function App() {
   const [showMenu, setShowMenu] = useState({ display: "none" });
-  const [mouseScrollY, setMouseScroll] = useState(0);
   document.body.style.backgroundColor = "var(--main-back-color)";
   const [showLoader, setShowLoader] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      window.onscroll = () => {
-        setMouseScroll(window.pageYOffset);
-        console.log(window);
-      }
-    }, 100);
-  })
   useEffect(() => {
     setTimeout(() => {
       setShowLoader(false);
