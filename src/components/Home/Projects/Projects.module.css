@@ -1,13 +1,14 @@
 .projectContainer {
     display: block;
-    height: 1000px;
+    height: min-content;
 }
 
 .projects {
-    padding-bottom: 100px;
-    height: 400vh;
+    min-height: 180vh;
     position: relative;
+    /* border: 1px solid red; */
     padding-top: 100px;
+    padding-bottom: 700px;
 }
 
 .projects::before {
@@ -16,7 +17,7 @@
     top: 100px;
     left: 20px;
     width: 3px;
-    height: 100%;
+    height: 70%;
     background-color: rgba(110, 173, 118, 0.5);
     border-radius: 100px;
 }
@@ -25,9 +26,17 @@
     position: relative;
     /* border: 1px solid gray; */
     height: max-content;
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: left;
     margin-left: 7px;
+}
+
+.soleProject:first-child {
+    margin-top: 100px;
+}
+
+.soleProject:last-child {
+    /* border: 1px solid gray; */
 }
 
 .bulletMarker {
@@ -42,20 +51,44 @@
 }
 
 .imageContainer {
-    background-color: gray;
-    height: 1000px;
+    height: 100%;
+    /* border: 1px solid gray; */
+    top: 300px;
+    width: 100%;
+    position: absolute;
 }
 
 .projectImage {
     width: 100%;
-    height: 480px;
-    margin-top: 200px;
+    background-color: gray;
+    margin-top: 300px;
     z-index: 4;
     border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     position: -webkit-sticky;
     position: sticky;
+}
+
+.projectTitle {
+    color: var(--text-green);
+    font-size: var(--font-l);
+    font-weight: 600;
+}
+
+.technologiesUsed {
+    /* border: 1px solid gray; */
+}
+
+.projectFeatures {
+    /* border: 1px solid gray; */
+}
+
+.aboutTitle {
+    font-size: var(--font-m);
+    color: var(--text-white);
+}
+
+.featureList {
+    line-height: 34px;
 }
 
 .projectImage img {
@@ -74,6 +107,7 @@
 
 .aboutProject {
     /* border: 1px solid gray; */
-    padding-top: 5px;
+    color: var(--text-gray);
+    font-size: var(--font-n);
     padding-left: 50px;
 }

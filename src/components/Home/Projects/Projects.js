@@ -1,57 +1,96 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import Rellax from "rellax";
 import projectStyles from './Projects.module.css';
-import aaron from '../../../images/projects/aaron-header.png';
+import aaron from '../../../images/projects/aaron-dashboard.png';
+import bookscaper from '../../../images/projects/bookscaper.png';
 
 const Projects = () => {
-
+    const mainSpeed = useRef(0);
+    useEffect(() => {
+        new Rellax(".imageScroll", { // <---- Via class name
+            speed: +2,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        });
+    }, [])
     const [mouseScrollY, setMouseScroll] = useState(0);
-    const [isFixed, setIsFixed] = useState({
-        position: "relative"
-    });
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         window.onscroll = () => {
-    //             setMouseScroll(window.pageYOffset);
-    //             const projectImage = document.getElementsByClassName(projectStyles?.projectImage)[0];
-    //             let pITop = projectImage.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-    //             console.log(`${pITop} ${mouseScrollY}`);
-    //             if (pITop > 2200) {
-    //                 if (isFixed?.position === "relative") {
-    //                     const newFixed = { ...isFixed }
-    //                     newFixed.position = "fixed";
-    //                     setIsFixed(newFixed);
-    //                 }
-    //             }
-    //             else {
-    //                 if (isFixed?.position === "fixed") {
-    //                     const newFixed = { ...isFixed }
-    //                     newFixed.position = "relative";
-    //                     setIsFixed(newFixed);
-    //                 }
-    //             }
-    //         }
-    //     });
-    // })
+    const [isChanged, setIsChanged] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            window.onscroll = () => {
+                setIsChanged(false);
+                setMouseScroll(parseInt(window.pageYOffset));
+                const projectImage = document.getElementsByClassName(projectStyles?.projectImage)[0];
+                let pITop = parseInt(projectImage.getBoundingClientRect().top - document.body.getBoundingClientRect().top);
+                console.log(`${pITop} ${mouseScrollY}`);
+                if (mouseScrollY > 2200 && isChanged == false) {
+                    const newImage = { ...currImage };
+                    newImage.background = `url(${bookscaper})`;
+                    setCurrImage(newImage);
+                    setIsChanged(true);
+                }
+            }
+        });
+    })
     const proImg = {
         background: `url(${aaron})`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "100%",
         backgroundRepeat: "no-repeat",
     }
+    const [currImage, setCurrImage] = useState(proImg);
     return (
         <div className={projectStyles.projectContainer}>
             <div className={projectStyles.projects}>
+
                 <div className={projectStyles.soleProject}>
                     <div className={projectStyles.bulletMarker}>
                         <div className={projectStyles.bulletCircle}></div>
                     </div>
                     <div className={projectStyles.aboutProject}>
-                        AAron-Stanley: A photographer portfolio
+                        <div className={projectStyles.projectTitle}>
+                            AAron-Stanley: A photographer portfolio
+                        </div>
+                        <div className={projectStyles.projectDetails}>
+                            <div className={projectStyles.technologiesUsed}>
+
+                                <span className={projectStyles.aboutTitle}>FrontEnd : </span>
+                                 React.js, HTML5, CSS3, Bootstrap
+                                <br />
+                                <span className={projectStyles.aboutTitle}>BackEnd : </span>
+                                MongoDB, Firebase, Express.js
+                            </div>
+                            <div className={projectStyles.projectFeatures}>
+                                <span className={projectStyles.aboutTitle}>Features</span>
+                                <ul className={projectStyles.featureList}>
+                                    <li>Built React application for photographers
+to maintain clients with ease.</li>
+                                    <li>Implemented a firebase authentication
+system.</li>
+                                    <li>Implemented admin dashboard to regulate
+                                    clients’ bookings and stripe payment
+method.</li>
+                                    <li>Used React, CSS3, JavaScript, Material UI
+for creating radiant front-end design.</li>
+                                    <li>Used Express, MongoDB for back-end
+development.</li>
+                                    <li>Deployed to firebase and Heroku is
+functioning at the backend.</li>
+                                </ul>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* project image */}
-                <div className={`${projectStyles.projectImage} projectImage`} style={proImg
-                }>
+                <div className={projectStyles.imageContainer}>
+
+                    <div className={`${projectStyles.projectImage} projectImage imageScroll`} style={currImage
+                    }>
+                    </div>
                 </div>
                 {/* project image */}
                 <div className={projectStyles.soleProject}>
@@ -59,17 +98,38 @@ const Projects = () => {
                         <div className={projectStyles.bulletCircle}></div>
                     </div>
                     <div className={projectStyles.aboutProject}>
-                        AAron-Stanley: A photographer portfolio
+                        <div className={projectStyles.projectTitle}>
+                            BookScaper: An online bookstore
+                        </div>
+                        <div className={projectStyles.projectDetails}>
+                            <div className={projectStyles.technologiesUsed}>
+
+                                <span className={projectStyles.aboutTitle}>FrontEnd : </span>
+                                 React.js, HTML5, CSS3, Bootstrap
+                                <br />
+                                <span className={projectStyles.aboutTitle}>BackEnd : </span>
+                                MongoDB, Firebase, Express.js
+                            </div>
+                            <div className={projectStyles.projectFeatures}>
+                                <span className={projectStyles.aboutTitle}>Features</span>
+                                <ul className={projectStyles.featureList}>
+                                    <li>An online bookstore built with React and
+Express.</li>
+                                    <li>Implemented a firebase authentication
+system to deal with customers’ orders.</li>
+                                    <li>Implemented admin dashboard to
+manage available books in the store.</li>
+                                    <li>Used React, CSS3 for designing the
+website.</li>
+                                    <li>Deployed to firebase and Heroku is
+operating at the back-end.</li>
+                                </ul>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className={projectStyles.soleProject}>
-                    <div className={projectStyles.bulletMarker}>
-                        <div className={projectStyles.bulletCircle}></div>
-                    </div>
-                    <div className={projectStyles.aboutProject}>
-                        AAron-Stanley: A photographer portfolio
-                    </div>
-                </div>
+
             </div>
         </div>
     );
