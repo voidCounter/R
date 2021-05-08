@@ -7,6 +7,7 @@ import Navbar from './Navbar/Navbar';
 import Rellax from "rellax";
 import About from './About/About';
 import Projects from './Projects/Projects';
+import Blogs from './Blogs/Blogs';
 const Home = () => {
     const mainSpeed = useRef(0);
     useEffect(() => {
@@ -32,6 +33,10 @@ const Home = () => {
                     Projects
                 </div>
                 <Projects></Projects>
+                <div className={styles.sectionTitle} id="aboutSection">
+                    Some writings of me
+                </div>
+                <Blogs></Blogs>
             </div>
             <Social></Social>
         </div>
