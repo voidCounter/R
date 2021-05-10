@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Header.module.css';
 import Rellax from "rellax";
 import buttonStyles from '../../../components/button.module.css';
+import animStyles from '../../../components/clickAnim.module.css';
 import { Fade, Slide } from 'react-reveal';
 
 const Header = () => {
@@ -35,12 +36,9 @@ const Header = () => {
                         <Slide duration={500} delay={700} left cascade><div className={`${styles.name}`}>Rohit Roy</div></Slide>
                         <div className={`${styles.tagline}`}>I use MERN stack to unite logic and creativity</div>
                         <div className={buttonStyles.linkedElement} style={{ marginTop: '30px' }}>
-                            {/* <a className={`${buttonStyles.button}`} href="https://drive.google.com/uc?export=download&id=1XuiW2CWHRpVkRBkWnHbfSKh7V8qA1XbL" target="_blank" rel="noopener noreferrer">
+                            <a className={`${buttonStyles.button} ${animStyles.clickable}`} href="https://drive.google.com/uc?export=download&id=1XuiW2CWHRpVkRBkWnHbfSKh7V8qA1XbL" target="_blank" rel="noopener noreferrer">
                                 Resume
-                        </a> */}
-                            <div className={`${buttonStyles.button}`}>
-                                Resume
-                        </div>
+                        </a>
                         </div>
                     </div>
                 </div>

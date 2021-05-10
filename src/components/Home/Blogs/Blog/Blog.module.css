@@ -72,8 +72,12 @@
     /* border: 1px solid gray; */
     margin-top: 10px;
     font-family: var(--font-heading);
+    width: min-content;
     font-size: var(--font-n);
     font-weight: bold;
+    border-radius: 100px;
+    padding: 2px 10px;
+    overflow: hidden;
 }
 
 .blogButton a {

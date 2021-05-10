@@ -4,14 +4,6 @@
     align-items: center;
 }
 
-.menu {
-    /* background-color: rgba(0, 3, 6, 1); */
-    /* width: 500px; */
-    /* display: none; */
-    /* position: relative; */
-    /* height: 40px; */
-}
-
 .menuItem {
     width: 125px;
     color: var(--text-white);

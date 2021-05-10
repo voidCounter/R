@@ -21,7 +21,7 @@ const Projects = () => {
 
     return (
         <div className={projectStyles.projectContainer} >
-            <div className={projectStyles.projects} id="projects">
+            <div className={projectStyles.projects}>
 
                 <div className={projectStyles.soleProject}>
                     <div className={projectStyles.bulletMarker}>

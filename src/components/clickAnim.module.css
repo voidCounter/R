@@ -1,3 +1,7 @@
+.clickable {
+    position: relative;
+}
+
 .clickable::after {
     content: '';
     position: absolute;
@@ -9,6 +13,11 @@
     background-color: transparent;
     width: 10px;
     height: 10px;
-    transition: 0.1s transform ease-in;
+    transition: 0.07s transform ease-in;
     border-radius: 50%;
+}
+
+.clickable:active::after {
+    transform: scale(30);
+    background-color: rgba(110, 173, 118, 0.1)
 }

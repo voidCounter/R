@@ -5,23 +5,7 @@
     color: var(--text-green);
     padding: 14px 40px;
     border-radius: 40px;
-    transition: 0.5s;
     letter-spacing: 1.5px;
-}
-
-.button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* bottom: -50%; */
-    /* left: 20%; */
-    background-color: transparent;
-    width: 10px;
-    height: 10px;
-    transition: 0.1s transform ease-in;
-    border-radius: 50%;
 }
 
 .linkedElement:active {
@@ -40,9 +24,4 @@
 
 .linkedElement:hover {
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-.button:active::after {
-    transform: scale(20);
-    background-color: rgba(110, 173, 118, 0.1)
 }

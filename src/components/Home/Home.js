@@ -21,7 +21,7 @@ const Home = () => {
         });
     }, [])
     return (
-        <div className={`${styles.home} home`}>
+        <main className={`${styles.home}`}>
             <Navbar></Navbar>
             <div className={`${styles.main} main mainScroll`}>
                 <Header></Header>
@@ -29,17 +29,17 @@ const Home = () => {
                     Who am I?
                 </div>
                 <About></About>
-                <div className={styles.sectionTitle} id="aboutSection">
+                <div className={styles.sectionTitle} id="projects">
                     Projects
                 </div>
                 <Projects></Projects>
-                <div className={styles.sectionTitle} id="aboutSection">
+                <div className={styles.sectionTitle} id="blogs">
                     Some writings of me
                 </div>
                 <Blogs></Blogs>
             </div>
             <Social></Social>
-        </div>
+        </main>
     );
 };
 
