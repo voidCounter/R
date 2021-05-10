@@ -31,6 +31,7 @@ body {
   --main-back-color: rgba(19, 25, 33, 1);
   --logo: rgba(255, 255, 255, 0.7);
   --main-marker: rgba(255, 255, 255, 0.1);
+  --btn-background: rgba(255, 255, 255, 0.09);
   /* fonts */
   --font-normal1: 'ubuntu', sans-serif;
   --font-normal2: 'Lato', sans-serif;
@@ -39,7 +40,7 @@ body {
   --font-serif: 'Roboto Slab', serif;
   /* font-sizes */
   --font-n: clamp(16px, 2vw, 18px);
-  --font-s: clamp(13px, 2vw, 16px);
+  --font-s: clamp(13px, 4vw, 16px);
   --font-xxl: clamp(40px, 8vw, 75px);
   --font-xl: clamp(25px, 7vw, 50px);
   --font-m: clamp(20px, 2vw, 24px);

@@ -6,12 +6,13 @@
     overflow: hidden;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: default;
-    border: 1px solid var(--text-green);
-    color: var(--text-green);
+    /* border: 1px solid var(--text-green); */
+    color: var(--text-white);
+    border: 1px solid transparent;
     font-size: var(--font-s);
-    background-color: rgba(110, 173, 118, 0.08);
+    background-color: var(--btn-background);
 }
 
 .tag:hover {
-    background-color: transparent;
+    border: 1px solid var(--text-white);
 }

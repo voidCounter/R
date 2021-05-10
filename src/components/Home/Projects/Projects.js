@@ -19,11 +19,6 @@ const Projects = () => {
     const [mouseScrollY, setMouseScroll] = useState(0);
     const [isChanged, setIsChanged] = useState(false);
 
-
-
-    const [currImage, setCurrImage] = useState({
-        background: `url(${aaron})`,
-    });
     return (
         <div className={projectStyles.projectContainer} >
             <div className={projectStyles.projects} id="projects">
@@ -70,8 +65,8 @@ functioning at the backend.</li>
                 {/* project image */}
                 <div className={projectStyles.imageContainer}>
 
-                    <div className={`${projectStyles.projectImage} projectImage imageScroll`} style={currImage
-                    }>
+                    <div className={`${projectStyles.projectImage} projectImage imageScroll`} >
+                        <img src={aaron} alt="aaron-project" srcset="" />
                     </div>
                 </div>
                 {/* project image */}
@@ -110,6 +105,14 @@ operating at the back-end.</li>
                             </div>
                         </div>
                     </div>
+                    {/* project image */}
+                    <div className={projectStyles.imageContainer}>
+
+                        <div className={`${projectStyles.projectImage} projectImage imageScroll`}>
+                            <img src={bookscaper} alt="bookscaper-project" srcset="" />
+                        </div>
+                    </div>
+                    {/* project image */}
                 </div>
 
             </div>

@@ -19,6 +19,7 @@
     transition: 0.3s all ease-in-out;
     position: relative;
     z-index: 1;
+    border-radius: 100px;
     border: 2px solid transparent;
     cursor: pointer;
 }
@@ -45,10 +46,28 @@
     color: var(--text-green);
 }
 
+.menuItem:active {
+    animation-name: clicked;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0.45, 0.80, 0, 1.30);
+}
+
+@keyframes clicked {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: var(--text-green);
+    }
+}
+
 .menuItem:hover .optionText::after {
     width: 100%;
 }
 
 .menuItem:active .optionText::after {
-    width: 100%;
+    width: 0%;
 }
