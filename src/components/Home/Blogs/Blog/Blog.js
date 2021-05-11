@@ -2,12 +2,11 @@ import { faArrowAltCircleRight, faClock } from '@fortawesome/free-regular-svg-ic
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import animStyles from '../../../../components/clickAnim.module.css';
-import buttonStyles from '../../../../components/button.module.css';
 import Tags from '../../../Tags/Tags';
 import menuStyles from '../../Navbar/Menu/Menu.module.css';
 import defaultBlog from '../../../../images/blogs/defaultblog.jpg';
 import styles from './Blog.module.css';
+import Button from '../../../Button/Button';
 
 const Blog = (props) => {
     // setting default image for blogs for user exeperience
@@ -28,6 +27,10 @@ const Blog = (props) => {
     let proTitle = title.substring(0, 60) + '...';
     console.log(description);
     let proSubTitle = subTitle.substring(0, 90) + '...';
+    const btnInfo = {
+        link: link,
+        btnText: "Read More"
+    }
     return (
         <div className={styles.blog}>
             <div className={styles.blogImage}>
@@ -49,13 +52,8 @@ const Blog = (props) => {
                 <div className={styles.blogSubtitle}>
                     {proSubTitle}
                 </div>
-                <div className={`${styles.blogButton}`}>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                        <div className={`${menuStyles.menuItem} menuItem ${animStyles.clickable}`} style={{ justifyContent: 'flex-start' }}><span className={menuStyles.optionText}>
-                            <FontAwesomeIcon icon={faArrowRight} style={{ marginRight: '5px' }} />
-                        Read More</span>
-                        </div>
-                    </a>
+                <div style={{ marginTop: '10px', marginBottom: '20px' }}>
+                    <Button btn={btnInfo}></Button>
                 </div>
             </div>
         </div >

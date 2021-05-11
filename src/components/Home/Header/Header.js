@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Header.module.css';
 import Rellax from "rellax";
-import buttonStyles from '../../../components/button.module.css';
-import animStyles from '../../../components/clickAnim.module.css';
 import { Fade, Slide } from 'react-reveal';
+import Button from '../../Button/Button';
 
 const Header = () => {
     const speed = useRef(0);
@@ -27,6 +26,10 @@ const Header = () => {
         //     horizontal: false
         // });
     }, []);
+    const btnInfo = {
+        link: "https://drive.google.com/uc?export=download&id=1XuiW2CWHRpVkRBkWnHbfSKh7V8qA1XbL",
+        btnText: "Resume"
+    };
     return (
         <div className={`${styles.headerContainer} headerContainer`}>
             <Fade delay={700}>
@@ -35,15 +38,13 @@ const Header = () => {
                         <div style={{ paddingLeft: '3px' }}>Hi, My name is </div>
                         <Slide duration={500} delay={700} left cascade><div className={`${styles.name}`}>Rohit Roy</div></Slide>
                         <div className={`${styles.tagline}`}>I use MERN stack to unite logic and creativity</div>
-                        <div className={buttonStyles.linkedElement} style={{ marginTop: '30px' }}>
-                            <a className={`${buttonStyles.button} ${animStyles.clickable}`} href="https://drive.google.com/uc?export=download&id=1XuiW2CWHRpVkRBkWnHbfSKh7V8qA1XbL" target="_blank" rel="noopener noreferrer">
-                                Resume
-                        </a>
+                        <div style={{ marginTop: '25px' }}>
+                            <Button btn={btnInfo}></Button>
                         </div>
                     </div>
                 </div>
             </Fade>
-        </div>
+        </div >
     );
 };
 

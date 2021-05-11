@@ -1,0 +1,66 @@
+.contactContainer {
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputbox> :nth-child(n) {
+    border: 0px;
+    border: 1px solid transparent;
+    font-family: var(--font-normal2);
+    font-size: var(--font-n);
+    border-radius: 10px;
+    /* letter-spacing: 1.2px; */
+    background-color: var(--btn-background);
+    transition: 0.2s background-color cubic-bezier(0.47, 0, 0.745, 0.715), 0.4s box-shadow cubic-bezier(0.47, 0, 0.745, 0.715);
+    color: var(--text-white);
+    width: 85vw;
+    max-width: 500px;
+    padding: 13px 10px;
+    outline: none;
+}
+
+.inputbox> :nth-child(n):focus {
+    background-color: rgba(110, 173, 118, 0.08);
+    /* border: 1px solid var(--text-gray); */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.inputbox> :nth-child(n):hover {
+    background-color: rgba(110, 173, 118, 0.08);
+}
+
+.inputbox> :nth-child(n)::placeholder {
+    color: var(--text-gray);
+}
+
+.inputbox textarea {
+    background-color: transparent;
+    line-height: 28px;
+    outline: none;
+    color: var(--text-white);
+}
+
+.inputbox .wordCount {
+    width: 80px;
+    color: var(--text-gray);
+    height: 40px;
+}
+
+.submitGrp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}

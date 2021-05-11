@@ -118,7 +118,7 @@
 
 .loaderText {
     color: var(--text-green);
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-heading);
     font-weight: normal;
     font-size: 66px;
     text-transform: uppercase;

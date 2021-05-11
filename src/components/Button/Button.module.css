@@ -1,0 +1,66 @@
+.button {
+    position: relative;
+    display: block;
+    /* overflow: hidden; */
+    transition: 0.2s all ease-in-out;
+    color: var(--text-green);
+    padding: 10px clamp(16px, 8vw, 30px);
+    font-weight: 600;
+    font-size: var(--font-n);
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 10px;
+    /* backface-visibility: hidden; */
+    border: 1px solid var(--text-gray);
+    /* border-bottom: 7px solid gray; */
+    background-color: var(--btn-background);
+    letter-spacing: 1.5px;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(4px);
+}
+
+.button:active {
+    transition: 0.07s all ease-in-out;
+    transform: translateY(11px);
+}
+
+.button:hover::after {
+    transform: translateY(-2px);
+}
+
+.button:active::after {
+    transition: 0.07s all ease-in-out;
+    transform: translateY(-7px);
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    transition: 0.2s all ease-in-out;
+    height: 100%;
+    bottom: -12px;
+    border-radius: 10px;
+    left: 0px;
+    border-bottom: 1px solid var(--text-gray);
+}
+
+/* .button:active {
+    border: 1px solid white;
+    transition: 0.4s 1s;
+    transform: scale(1.05);
+} */
+
+.linkedElement {
+    /* margin-bottom: 10px; */
+    /* margin-top: 15px; */
+    border-radius: 10px;
+    width: min-content;
+    position: relative;
+    cursor: pointer;
+}
+
+/* .buttonClick */

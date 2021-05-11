@@ -87,7 +87,7 @@
 }
 
 .aboutDescription {
-    font-family: var(--font-heading);
+    font-family: var(--font-normal2);
     font-weight: 500;
     line-height: 30px;
     word-spacing: 1px;

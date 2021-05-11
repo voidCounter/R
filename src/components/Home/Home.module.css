@@ -3,7 +3,7 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    font-family: var(--font-normal);
+    font-family: var(--font-normal2);
     width: 100%;
     height: min-content;
     /* overflow: hidden; */

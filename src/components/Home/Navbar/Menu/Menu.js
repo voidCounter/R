@@ -28,7 +28,8 @@ const Menu = (props) => {
                 <a href="#blogs">
                     <div className={`${styles.menuItem} menuItem`} onClick={goToBlogs}><span className={styles.optionText}>Blogs</span></div></a></Fade>
             <Fade bottom duration={500} delay={300}>
-                <div className={`${styles.menuItem} menuItem`} onClick={goToContact}><span className={styles.optionText}>Contact</span></div></Fade>
+                <a href="#contact">
+                    <div className={`${styles.menuItem} menuItem`} onClick={goToContact}><span className={styles.optionText}>Contact</span></div></a></Fade>
         </div>
     );
 };

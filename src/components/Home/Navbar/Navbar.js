@@ -9,6 +9,7 @@ import '../../../App.css';
 const Navbar = () => {
     const [showMenu, setShowMenu] = useContext(menuContext);
     let prevScrollpos = window.pageYOffset;
+    let getNavStyles;
     useEffect(() => {
         window.onscroll = function () {
             let currentScrollPos = window.pageYOffset;
@@ -31,9 +32,9 @@ const Navbar = () => {
         const bar2 = document.getElementsByClassName(styles.bar2)[0];
         const navPage = document.getElementsByClassName(styles.menuContainer)[0];
         const navIcon = document.getElementsByClassName(styles.navIcon)[0];
+        console.log(navIcon);
         navPage.style.opacity = "0";
         const navIconState = getComputedStyle(navIcon);
-        console.log(navIconState.display);
         const menuContainer = document.getElementsByClassName(styles.menuContainer)[0];
         menuContainer.style.transform = "scale(1.3)";
         const newShow = { ...showMenu };
@@ -69,7 +70,7 @@ const Navbar = () => {
         setTimeout(() => {
             navPage.style.opacity = "1";
             menuContainer.style.transform = "scale(1)";
-        }, 270);
+        }, 280);
 
     }
     const reloadPage = () => {
@@ -87,14 +88,17 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className={styles.navGroup}>
+                        {/* navIcon */}
                         <div onClick={toggleNavPage} className={`${styles.navIcon} navIcon`}>
                             <div className={styles.bar1}></div>
                             <div className={styles.bar2}></div>
                         </div>
+                        {/* The things inside navIcon */}
                         <div className={`${styles.menuContainer} menuContainer`} style={showMenu}>
                             <Menu toggle={toggleNavPage}></Menu>
                         </div>
                     </div>
+                    <div className="navspacer"></div>
                 </div>
             </div>
         </Fade>
