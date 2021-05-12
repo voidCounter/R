@@ -1,15 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Loader from './components/Loader/Loader';
 import Home from './components/Home/Home';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
-import userEvent from '@testing-library/user-event';
+import { createContext, useEffect, useState } from 'react';
 export const menuContext = createContext();
 export const mouseScroll = createContext();
 

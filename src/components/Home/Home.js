@@ -9,6 +9,7 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from '../Home/Contact/Contact';
 import Blogs from './Blogs/Blogs';
+import Footer from './Footer/Footer';
 const Home = () => {
     const mainSpeed = useRef(0);
     useEffect(() => {
@@ -44,6 +45,7 @@ const Home = () => {
                 <Contact></Contact>
             </div>
             <Social></Social>
+            <Footer></Footer>
         </main>
     );
 };

@@ -32,10 +32,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  /* scroll-bhavior: smooth; */
-}
-
 :root {
   --text-white: rgba(255, 255, 255, 0.7);
   --text-gray: rgba(255, 255, 255, 0.5);
@@ -53,8 +49,8 @@ body {
   --font-normal3: 'ProximaNova-Regular', sans-serif;
   --font-serif: 'Roboto Slab', serif;
   /* font-sizes */
-  --font-n: clamp(16px, 2vw, 18px);
-  --font-s: clamp(13px, 4vw, 16px);
+  --font-n: clamp(15px, 2vw, 18px);
+  --font-s: clamp(12px, 8vw, 15px);
   --font-xxl: clamp(40px, 8vw, 75px);
   --font-xl: clamp(25px, 7vw, 50px);
   --font-m: clamp(20px, 2vw, 24px);
@@ -63,7 +59,7 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .navIcon {
     display: flex;
   }
@@ -100,11 +96,20 @@ body {
   .projectImage {
     height: 380px;
   }
+  .blogs {
+    justify-content: center;
+  }
+  .blogImage {
+    display: none;
+  }
+  .socialIcons {
+    display: none;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 630px) {
   .navIcon {
     display: flex;
   }
@@ -137,6 +142,15 @@ body {
   }
   .projectImage {
     height: 400px;
+  }
+  .blogs {
+    justify-content: space-around;
+  }
+  .blogImage {
+    display: block;
+  }
+  .socialIcons {
+    display: none;
   }
 }
 
@@ -176,6 +190,15 @@ body {
   .projectImage {
     height: 430px;
   }
+  .blogs {
+    justify-content: space-around;
+  }
+  .blogImage {
+    display: block;
+  }
+  .socialIcons {
+    display: none;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -213,6 +236,15 @@ body {
   .projectImage {
     height: 460px;
   }
+  .blogs {
+    justify-content: space-around;
+  }
+  .blogImage {
+    display: block;
+  }
+  .socialIcons {
+    display: flex;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -249,5 +281,14 @@ body {
   }
   .projectImage {
     height: 480px;
+  }
+  .blogs {
+    justify-content: space-around;
+  }
+  .blogImage {
+    display: block;
+  }
+  .socialIcons {
+    display: flex;
   }
 }

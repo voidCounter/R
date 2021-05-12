@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Button from '../../Button/Button';
 import contactStyles from './Contact.module.css';
 import emailjs from 'emailjs-com';
-import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
-// require('dotenv').config();
 const Contact = () => {
     const [pointerEvent, setPointerEvent] = useState({
         pointerEvents: 'none'
@@ -19,7 +17,6 @@ const Contact = () => {
         border: '1px solid transparent'
     })
     const displayWords = (event) => {
-        const message = event.target.value;
         setcountLetters(event.target.value.length);
     }
     const btnInfo = {
@@ -31,9 +28,9 @@ const Contact = () => {
         const formData = document.getElementsByClassName(contactStyles.contactForm)[0];
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formData, process.env.REACT_APP_USER_ID)
             .then((result) => {
-                console.log(result.text);
+                // console.log(result.text);
             }, (error) => {
-                console.log(error.text);
+                // console.log(error.text);
             })
 
     }

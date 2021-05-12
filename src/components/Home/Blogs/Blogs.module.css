@@ -1,11 +1,17 @@
-.blogContainer {}
+.blogContainer {
+    /* border: 1px solid red; */
+    height: min-content;
+}
 
 .blogs {
-    height: min-content;
+    /* border: 1px solid gray; */
     margin-top: 100px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    column-gap: 10px;
+    row-gap: 30px;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 150px;
+    height: min-content;
 }

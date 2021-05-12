@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import userImage from '../../../images/userImage-removebg.jpg';
-import { Fade, Slide } from 'react-reveal';
+import { Fade } from 'react-reveal';
 import Tags from '../../Tags/Tags';
 import aboutStyles from './About.module.css';
 const About = () => {

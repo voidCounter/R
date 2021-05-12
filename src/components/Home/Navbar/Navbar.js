@@ -32,7 +32,7 @@ const Navbar = () => {
         const bar2 = document.getElementsByClassName(styles.bar2)[0];
         const navPage = document.getElementsByClassName(styles.menuContainer)[0];
         const navIcon = document.getElementsByClassName(styles.navIcon)[0];
-        console.log(navIcon);
+        // console.log(navIcon);
         navPage.style.opacity = "0";
         const navIconState = getComputedStyle(navIcon);
         const menuContainer = document.getElementsByClassName(styles.menuContainer)[0];

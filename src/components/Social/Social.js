@@ -7,7 +7,7 @@ import styles from './Social.module.css';
 const Social = () => {
     return (
         <Fade bottom duration={500} delay={1500}>
-            <div className={styles.socialIcons}>
+            <div className={`${styles.socialIcons} socialIcons`}>
                 <a href="https://github.com/rohittz" target="_blank" rel="noopener noreferrer">
                     <div className={styles.socialIcon}>
                         <FontAwesomeIcon icon={faGithub} />

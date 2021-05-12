@@ -3,11 +3,12 @@
     display: block;
     /* overflow: hidden; */
     transition: 0.2s all ease-in-out;
-    color: var(--text-green);
+    color: var(--text-white);
     padding: 10px clamp(16px, 8vw, 30px);
     font-weight: 600;
     font-size: var(--font-n);
     text-transform: uppercase;
+    cursor: pointer;
     white-space: nowrap;
     border-radius: 10px;
     /* backface-visibility: hidden; */
@@ -42,7 +43,7 @@
     width: 100%;
     transition: 0.2s all ease-in-out;
     height: 100%;
-    bottom: -12px;
+    bottom: -9px;
     border-radius: 10px;
     left: 0px;
     border-bottom: 1px solid var(--text-gray);

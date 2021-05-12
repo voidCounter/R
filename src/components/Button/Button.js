@@ -3,7 +3,7 @@ import btnStyles from './Button.module.css';
 
 const Button = (props) => {
     const clickButton = (event) => {
-        const elem = document.getElementsByClassName(btnStyles.button)[0];
+        // const elem = document.getElementsByClassName(btnStyles.button)[0];
         // elem.style.transform = "translateY(-10px)";
         setTimeout(function () {
             // window.location.href = link;

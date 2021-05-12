@@ -1,8 +1,8 @@
 .socialIcons {
-    display: flex;
+    /* display: flex; */
     position: fixed;
     bottom: 0px;
-    left: 20px;
+    left: clamp(10px, 1.5vw, 30px);
     padding-top: 20px;
     padding-bottom: 40px;
     background-color: var(--btn-background);
@@ -16,7 +16,7 @@
 }
 
 .socialIcon {
-    transition: 0.3s all ease-in-out;
+    transition: 0.2s all ease-in-out;
     font-size: 21px;
     color: var(--text-white);
     border: 1px solid transparent;

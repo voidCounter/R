@@ -1,0 +1,21 @@
+.footerContainer {
+    width: 100%;
+    height: min-content;
+    border: 1px solid gray;
+}
+
+.footer {
+    width: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMenu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+}
