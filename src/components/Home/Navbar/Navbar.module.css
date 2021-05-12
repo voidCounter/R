@@ -26,10 +26,6 @@
     justify-content: space-between;
 }
 
-.navspacer {
-    /* order: 1; */
-}
-
 /* logo */
 
 .logo {
@@ -56,7 +52,7 @@
     font-size: 21px;
     transition: all 0s;
     text-transform: uppercase;
-    padding-top: 2px;
+    /* padding-top: -4px; */
     transform: rotateZ(-45deg);
 }
 

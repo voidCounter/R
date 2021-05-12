@@ -1,15 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { menuContext } from '../../../App';
 import Menu from './Menu/Menu';
-import menuStyles from './Menu/Menu.module.css';
 import styles from './Navbar.module.css';
-import { Slide, Fade } from 'react-reveal';
+import { Fade } from 'react-reveal';
 import '../../../App.css';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useContext(menuContext);
     let prevScrollpos = window.pageYOffset;
-    let getNavStyles;
     useEffect(() => {
         window.onscroll = function () {
             let currentScrollPos = window.pageYOffset;

@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Button from '../../Button/Button';
 import contactStyles from './Contact.module.css';
 import emailjs from 'emailjs-com';
+import StatusMessage from '../../../components/StatusMesssage/StatusMessage'
 const Contact = () => {
+    const [showStatus, setShowStatus] = useState(true);
     const [pointerEvent, setPointerEvent] = useState({
         pointerEvents: 'none'
     })
@@ -23,12 +25,30 @@ const Contact = () => {
         link: "none",
         btnText: "Send"
     }
+    const clearInputs = () => {
+        const inputFields = document.getElementsByClassName(contactStyles.inputbox);
+        // console.log(inputFields);
+        // inputFields.forEach(element => {
+        //     console.log(element.childNodes[0]);
+        // });
+        for (let item of inputFields) {
+            item.firstChild.value = '';
+        }
+        // Changing state of a readonly input element
+        setcountLetters(0);
+    }
     const sendEmail = () => {
         // event.preventDefault();
         const formData = document.getElementsByClassName(contactStyles.contactForm)[0];
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formData, process.env.REACT_APP_USER_ID)
             .then((result) => {
-                // console.log(result.text);
+                if (result.text === "OK") {
+                    clearInputs();
+                    setShowStatus(true);
+                    setTimeout(() => {
+                        setShowStatus(false);
+                    }, 3100);
+                }
             }, (error) => {
                 // console.log(error.text);
             })
@@ -57,6 +77,10 @@ const Contact = () => {
     }
     return (
         <div className={contactStyles.contactContainer}>
+            {
+                showStatus &&
+                <StatusMessage messageText="Message sent successfully !"></StatusMessage>
+            }
             <div className={contactStyles.contact}>
                 <form action="" className={contactStyles.contactForm}>
                     <div className={contactStyles.inputbox}>
@@ -70,7 +94,7 @@ const Contact = () => {
                     </div>
                     <div className={contactStyles.submitGrp}>
                         <div className={`${contactStyles.inputbox}`}>
-                            <input type="text" value={countLetters} className={contactStyles.wordCount} readOnly />
+                            <input type="text" value={countLetters} className={contactStyles.wordCount} disable />
                         </div>
                         <div style={pointerEvent} onClick={sendEmail}>
                             <Button btn={btnInfo}></Button>

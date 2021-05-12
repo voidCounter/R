@@ -1,13 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import blog1 from '../../../images/blogs/blog1.png';
 import Blog from './Blog/Blog';
 import styles from './Blogs.module.css';
 const Blogs = () => {
     let allBlogs = [];
     const [blogs, setBlogs] = useState([]);
-    const [devTo, setDevTo] = useState([]);
     useEffect(() => {
         fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@rohitroyz')
             .then(res => res.json())
@@ -15,7 +13,7 @@ const Blogs = () => {
         fetch('https://dev.to/api/articles?username=rohittz')
             .then(res => res.json())
             .then(data => processDevTo(data));
-    }, [])
+    }, []);
     const processDevTo = (data) => {
         // title, pubDate, link, thumbnail, description
         // console.log(data);
@@ -39,7 +37,7 @@ const Blogs = () => {
         return description.substring(secondIndexfp + 3, secondIndexlp);
     }
     const processMedium = (data) => {
-        console.log(data);
+        // console.log(data);
         data.forEach(blog => {
             allBlogs.push({
                 title: blog.title,

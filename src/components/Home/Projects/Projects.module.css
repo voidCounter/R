@@ -6,14 +6,15 @@
 .projects {
     height: min-content;
     position: relative;
-    padding-top: 100px;
-    margin-bottom: 200px;
+    padding-top: 40px;
+    /* margin-bottom: 200px; */
 }
 
 .projects::before {
     content: '';
     position: absolute;
-    top: 100px;
+    /* top: 100px; */
+    top: 0;
     left: 20px;
     width: 3px;
     height: 90%;
@@ -24,17 +25,13 @@
 .soleProject {
     position: relative;
     height: max-content;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     text-align: left;
     margin-left: 7px;
 }
 
-.soleProject:first-child {
+.soleProject:not(:first-child) {
     margin-top: 100px;
-}
-
-.soleProject:last-child {
-    /* margin-bottom: 700px; */
 }
 
 .bulletMarker {
@@ -71,7 +68,7 @@
 }
 
 .projectTitle {
-    color: var(--text-green);
+    color: var(--text-white);
     font-family: var(--font-normal2);
     font-size: var(--font-l);
     font-weight: 600;
@@ -109,6 +106,7 @@
     font-weight: 500;
     display: block;
     position: relative;
+    cursor: default;
     z-index: 2;
     white-space: nowrap;
     min-width: 120px;

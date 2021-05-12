@@ -1,7 +1,7 @@
-import { faGithub, faGoogle, faLinkedin, faQuora, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faQuora, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Fade, Slide } from 'react-reveal';
+import { Fade } from 'react-reveal';
 import styles from './Social.module.css';
 
 const Social = () => {

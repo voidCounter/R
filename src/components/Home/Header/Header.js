@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Header.module.css';
 import Rellax from "rellax";
 import { Fade, Slide } from 'react-reveal';
 import Button from '../../Button/Button';
 
 const Header = () => {
-    const speed = useRef(0);
 
     useEffect(() => {
         new Rellax(".animate", { // <---- Via class name

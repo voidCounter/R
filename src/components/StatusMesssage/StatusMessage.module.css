@@ -1,0 +1,33 @@
+.status {
+    position: absolute;
+    top: 30px;
+    box-shadow: 3px 2px 9px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgb(39, 50, 65);
+    transition: 3s all ease-in-out;
+    padding: 20px 30px;
+    animation-name: showUp;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    border-radius: 10px;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}

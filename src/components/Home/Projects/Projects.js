@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Rellax from "rellax";
 import projectStyles from './Projects.module.css';
 import aaron from '../../../images/projects/aaron-photos.jpg';
@@ -7,7 +7,6 @@ import bookscaper from '../../../images/projects/bookscaper.jpg';
 import Tags from '../../Tags/Tags';
 
 const Projects = () => {
-    const mainSpeed = useRef(0);
     useEffect(() => {
         new Rellax(".imageScroll", { // <---- Via class name
             speed: 0,
@@ -18,9 +17,6 @@ const Projects = () => {
             horizontal: false
         });
     }, [])
-    const [mouseScrollY, setMouseScroll] = useState(0);
-    const [isChanged, setIsChanged] = useState(false);
-
     return (
         <div className={projectStyles.projectContainer} >
             <div className={projectStyles.projects}>

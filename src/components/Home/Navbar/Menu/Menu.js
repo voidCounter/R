@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Fade } from 'react-reveal';
-import { menuContext } from '../../../../App';
 import styles from './Menu.module.css';
 
 const Menu = (props) => {

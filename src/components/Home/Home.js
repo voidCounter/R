@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import Loader from '../Loader/Loader';
+import React, { useEffect } from 'react';
 import Social from '../Social/Social';
 import Header from './Header/Header';
 import styles from './Home.module.css';
@@ -11,7 +10,6 @@ import Contact from '../Home/Contact/Contact';
 import Blogs from './Blogs/Blogs';
 import Footer from './Footer/Footer';
 const Home = () => {
-    const mainSpeed = useRef(0);
     useEffect(() => {
         new Rellax(".mainScroll", { // <---- Via class name
             speed: -2,
@@ -32,15 +30,15 @@ const Home = () => {
                 </div>
                 <About></About>
                 <div className={styles.sectionTitle} id="projects">
-                    Projects
+                    Several things I have built
                 </div>
                 <Projects></Projects>
                 <div className={styles.sectionTitle} id="blogs">
-                    Some writings of me
+                    Some of my writings!
                 </div>
                 <Blogs></Blogs>
                 <div className={styles.sectionTitle} id="contact">
-                    Say hi to me
+                    Get in touch!
                 </div>
                 <Contact></Contact>
             </div>

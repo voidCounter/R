@@ -20,6 +20,8 @@
     /* letter-spacing: 2px; */
     font-size: var(--font-l);
     width: 100%;
+    margin-bottom: 100px;
+    margin-top: 200px;
     text-align: left;
     /* padding: 5px 0px; */
 }
