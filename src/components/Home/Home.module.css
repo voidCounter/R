@@ -3,7 +3,7 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    font-family: var(--font-normal2);
+    font-family: var(--font-normal1);
     width: 100%;
     height: min-content;
     /* overflow: hidden; */
@@ -14,8 +14,10 @@
 
 .sectionTitle {
     font-family: var(--font-heading);
+    /* text-transform: uppercase; */
     color: var(--text-green);
-    font-weight: bold;
+    font-weight: 600;
+    /* letter-spacing: 2px; */
     font-size: var(--font-l);
     width: 100%;
     text-align: left;
@@ -24,7 +26,7 @@
 
 .main {
     width: 85vw;
-    /* max-width: 950px; */
+    max-width: 950px;
     margin-bottom: 200px;
     z-index: 2;
 }

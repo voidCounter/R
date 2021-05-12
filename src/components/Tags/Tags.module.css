@@ -8,8 +8,10 @@
     cursor: default;
     /* border: 1px solid var(--text-green); */
     color: var(--text-white);
+    font-family: var(--font-normal2);
+    font-weight: 400;
     border: 1px solid transparent;
-    font-size: var(--font-s);
+    font-size: var(--font-n);
     background-color: var(--btn-background);
 }
 

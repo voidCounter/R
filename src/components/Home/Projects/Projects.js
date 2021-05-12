@@ -2,7 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import Rellax from "rellax";
 import projectStyles from './Projects.module.css';
 import aaron from '../../../images/projects/aaron-photos.jpg';
+import aboutStyles from '../About/About.module.css';
 import bookscaper from '../../../images/projects/bookscaper.jpg';
+import Tags from '../../Tags/Tags';
 
 const Projects = () => {
     const mainSpeed = useRef(0);
@@ -33,15 +35,25 @@ const Projects = () => {
                         </div>
                         <div className={projectStyles.projectDetails}>
                             <div className={projectStyles.technologiesUsed}>
-
-                                <span className={projectStyles.aboutTitle}>FrontEnd : </span>
-                                 React.js, HTML5, CSS3, Bootstrap
-                                <br />
-                                <span className={projectStyles.aboutTitle}>BackEnd : </span>
-                                MongoDB, Firebase, Express.js
+                                <span className={projectStyles.aboutTitle}>FrontEnd </span>
+                                <div className={aboutStyles.technologies}>
+                                    <Tags tagName="React.js"></Tags>
+                                    <Tags tagName="HTML5"></Tags>
+                                    <Tags tagName="CSS3"></Tags>
+                                    <Tags tagName="BootStrap"></Tags>
+                                </div>
                             </div>
+                            <div className={projectStyles.technologiesUsed}>
+                                <span className={projectStyles.aboutTitle}>BackEnd</span>
+                                <div className={aboutStyles.technologies}>
+                                    <Tags tagName="MongoDB"></Tags>
+                                    <Tags tagName="Firebase"></Tags>
+                                    <Tags tagName="Express.js"></Tags>
+                                </div>
+                            </div>
+
+                            <span className={projectStyles.aboutTitle} style={{ marginTop: '15px' }}>Features</span>
                             <div className={projectStyles.projectFeatures}>
-                                <span className={projectStyles.aboutTitle}>Features</span>
                                 <ul className={projectStyles.featureList}>
                                     <li>Built React application for photographers
 to maintain clients with ease.</li>
@@ -80,15 +92,25 @@ functioning at the backend.</li>
                         </div>
                         <div className={projectStyles.projectDetails}>
                             <div className={projectStyles.technologiesUsed}>
-
-                                <span className={projectStyles.aboutTitle}>FrontEnd : </span>
-                                 React.js, HTML5, CSS3, Bootstrap
-                                <br />
-                                <span className={projectStyles.aboutTitle}>BackEnd : </span>
-                                MongoDB, Firebase, Express.js
+                                <span className={projectStyles.aboutTitle}>FrontEnd </span>
+                                <div className={aboutStyles.technologies}>
+                                    <Tags tagName="React.js"></Tags>
+                                    <Tags tagName="HTML5"></Tags>
+                                    <Tags tagName="CSS3"></Tags>
+                                    <Tags tagName="BootStrap"></Tags>
+                                </div>
                             </div>
+                            <div className={projectStyles.technologiesUsed}>
+                                <span className={projectStyles.aboutTitle}>BackEnd</span>
+                                <div className={aboutStyles.technologies}>
+                                    <Tags tagName="MongoDB"></Tags>
+                                    <Tags tagName="Firebase"></Tags>
+                                    <Tags tagName="Express.js"></Tags>
+                                </div>
+                            </div>
+
+                            <span className={projectStyles.aboutTitle} style={{ marginTop: '15px' }}>Features</span>
                             <div className={projectStyles.projectFeatures}>
-                                <span className={projectStyles.aboutTitle}>Features</span>
                                 <ul className={projectStyles.featureList}>
                                     <li>An online bookstore built with React and
 Express.</li>
@@ -116,7 +138,7 @@ operating at the back-end.</li>
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 

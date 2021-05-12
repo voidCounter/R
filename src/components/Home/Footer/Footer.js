@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className={styles.footerContainer}>
             <div className={styles.footer}>
-                <div className={`${styles.socialMenu}`}>
+                <div className={`${styles.socialMenu} socialMenu`}>
                     <a href="https://github.com/rohittz" target="_blank" rel="noopener noreferrer">
                         <div className={socialStyles.socialIcon}>
                             <FontAwesomeIcon icon={faGithub} />
@@ -30,6 +30,9 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faQuora} />
                         </div>
                     </a>
+                </div>
+                <div className={`${styles.footerText}`}>
+                    Designed and Built by Rohit Roy
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@ const About = () => {
                      These days I am developing user-friendly applications using modern web technologies. During building or designing any web products, I put simplicity and users at the top the list.
                      <br />
                      Here are some of the techonologies I have been implementaing for quite a few months --
-                     <div className={aboutStyles.technologies}>
+                     <div className={aboutStyles.technologies} style={{ marginTop: '13px' }}>
                             <Tags tagName="JavaScript(ES6)"></Tags>
                             <Tags tagName="React"></Tags>
                             <Tags tagName="Nodejs"></Tags>

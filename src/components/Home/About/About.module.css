@@ -56,7 +56,7 @@
 
 .technologies {
     display: flex;
-    margin-top: 13px;
+    /* margin-top: 13px; */
     flex-flow: row wrap;
     justify-content: flex-start;
     row-gap: 10px;
@@ -87,7 +87,7 @@
 }
 
 .aboutDescription {
-    font-family: var(--font-normal2);
+    font-family: var(--font-normal1);
     font-weight: 500;
     line-height: 30px;
     word-spacing: 1px;

@@ -1,21 +1,30 @@
 .footerContainer {
     width: 100%;
+    margin-top: 30px;
+    background-color: var(--main-dark-back);
     height: min-content;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .footer {
-    width: 200px;
+    width: 100%;
+    height: 100px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    row-gap: 10px;
 }
 
 .socialMenu {
-    display: flex;
+    /* display: flex; */
     flex-flow: row nowrap;
+    column-gap: 20px;
     justify-content: center;
     align-items: center;
-    border: 1px solid gray;
+}
+
+.footerText {
+    font-family: var(--font-normal1);
+    /* font-weight: bold; */
 }

@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @font-face {
   font-family: 'Proxima-Nova-Bold';
   font-weight: 900;
@@ -36,20 +38,21 @@ a {
   --text-white: rgba(255, 255, 255, 0.7);
   --text-gray: rgba(255, 255, 255, 0.5);
   --text-green: #6EAD76;
-  --main-back-color: rgba(0, 0, 0, 0.9);
+  /* --main-back-color: rgba(0, 0, 0, 0.9); */
+  --main-dark-back: rgb(10, 14, 20);
   --main-back-color: rgba(19, 25, 33, 1);
   --logo: rgba(255, 255, 255, 0.7);
   --main-marker: rgba(255, 255, 255, 0.1);
   --btn-background: rgba(255, 255, 255, 0.07);
   /* fonts */
-  --font-normal1: 'ubuntu', sans-serif;
-  --font-normal2: 'Manrope', sans-serif;
+  --font-normal1: 'Open Sans', sans-serif;
+  --font-normal2: 'Jost', sans-serif;
   --font-heading: 'Manrope', sans-serif;
   --font-subhead: 'Manrope', sans-serif;
-  --font-normal3: 'ProximaNova-Regular', sans-serif;
+  --font-normal3: 'Open Sans', sans-serif;
   --font-serif: 'Roboto Slab', serif;
   /* font-sizes */
-  --font-n: clamp(15px, 2vw, 18px);
+  --font-n: clamp(16px, 2vw, 18px);
   --font-s: clamp(12px, 8vw, 15px);
   --font-xxl: clamp(40px, 8vw, 75px);
   --font-xl: clamp(25px, 7vw, 50px);
@@ -67,7 +70,7 @@ a {
     display: none;
   }
   .menuContainer {
-    background-color: var(--main-back-color);
+    background-color: var(--main-dark-back);
     position: fixed;
     top: 0;
     left: 0;
@@ -105,6 +108,9 @@ a {
   .socialIcons {
     display: none;
   }
+  .socialMenu {
+    display: flex;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -117,7 +123,7 @@ a {
     display: none;
   }
   .menuContainer {
-    background-color: var(--main-back-color);
+    background-color: var(--main-dark-back);
     position: fixed;
     top: 0;
     left: 0;
@@ -151,6 +157,9 @@ a {
   }
   .socialIcons {
     display: none;
+  }
+  .socialMenu {
+    display: flex;
   }
 }
 
@@ -199,6 +208,9 @@ a {
   .socialIcons {
     display: none;
   }
+  .socialMenu {
+    display: flex;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -245,6 +257,9 @@ a {
   .socialIcons {
     display: flex;
   }
+  .socialMenu {
+    display: none;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -290,5 +305,8 @@ a {
   }
   .socialIcons {
     display: flex;
+  }
+  .socialMenu {
+    display: none;
   }
 }
