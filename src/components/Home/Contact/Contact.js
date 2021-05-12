@@ -4,7 +4,7 @@ import contactStyles from './Contact.module.css';
 import emailjs from 'emailjs-com';
 import StatusMessage from '../../../components/StatusMesssage/StatusMessage'
 const Contact = () => {
-    const [showStatus, setShowStatus] = useState(true);
+    const [showStatus, setShowStatus] = useState(false);
     const [pointerEvent, setPointerEvent] = useState({
         pointerEvents: 'none'
     })
