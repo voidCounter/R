@@ -10,6 +10,13 @@
     /* margin-bottom: 200px; */
 }
 
+.projectLink {
+    padding: 6px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+}
+
 .projects::before {
     content: '';
     position: absolute;

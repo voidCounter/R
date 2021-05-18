@@ -1,0 +1,27 @@
+.iconButton {
+    cursor: pointer;
+    width: 120px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--text-green);
+    border-radius: 100px;
+    padding: 3px 10px;
+    transition: all ease-in-out 0.2s;
+    color: var(--text-green);
+}
+
+.iconButton:hover {
+    background-color: var(--text-green);
+    color: var(--main-back-color);
+}
+
+.iconButton:active {
+    transition: all ease-in-out 0.01s;
+    background-color: var(--text-white);
+}
+
+.icon {
+    margin-right: 5px;
+}
