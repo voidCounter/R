@@ -82,6 +82,8 @@
 }
 
 .technologiesUsed {
+    width: 100%;
+    /* border: 1px solid gray; */
     display: flex;
     flex-flow: row nowrap;
     column-gap: 10px;
@@ -109,7 +111,10 @@
     /* font-size: var(--font-n); */
     font-size: 17px;
     font-family: var(--font-normal2);
-    border: 1px solid var(--text-gray);
+    /* border: 1px solid var(--text-gray); */
+    border-radius: 100px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     font-weight: 500;
     display: block;
     position: relative;
@@ -121,11 +126,11 @@
     text-align: center;
     height: 35px;
     /* padding: 3px 14px; */
-    box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1);
+    /* box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1); */
     padding: 3px 5px;
     /* border: 1px solid gray; */
-    background-color: rgb(13, 17, 22);
-    margin-left: -50px;
+    background-color: rgba(65, 100, 76, 1);
+    margin-left: -35px;
     color: var(--text-gray);
 }
 

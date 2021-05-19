@@ -1,6 +1,8 @@
 .footerContainer {
     width: 100%;
     margin-top: 30px;
+    /* border: 1px solid gray; */
+    position: relative;
     background-color: var(--main-dark-back);
     height: min-content;
     /* border: 1px solid gray; */

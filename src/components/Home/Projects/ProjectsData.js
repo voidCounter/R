@@ -1,7 +1,7 @@
-import aaron from '../../../images/projects/aaron-dashboard.png';
+import aaron from '../../../images/projects/aaron-header.jpg';
 import bookscaper from '../../../images/projects/bookscaper.jpg';
-import someTodo from '../../../images/projects/some-todo.png';
-import fcfutaleufu from '../../../images/projects/fc-futaleufu.png';
+import someTodo from '../../../images/projects/some-todo.jpg';
+import fcfutaleufu from '../../../images/projects/fc-futaleufu.jpg';
 const projectsData = [
     {
         title: 'AAron-Stanley: A photographer portfolio',
